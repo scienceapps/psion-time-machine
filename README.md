@@ -6,7 +6,7 @@ Psion Time Capsule is a web app that lets users explore archived Psion-related w
 
 01-scanurl.py : This Python script is designed to scan a directory tree (including .txt files and .zip archives containing .txt files), extract all URLs found within those files, filter out unwanted URLs, and save the cleaned list of URLs to an output text file.
 
-- TEXT_EXTENSIONS = {'.txt'} can be set to multiple file extensions
+- 'TEXT_EXTENSIONS' = {'.txt'} can be set to multiple file extensions
 - input_directory = Path(r"path/to/folder") # Put the folder structure to be scanned here
 - output_urls_file = Path(r"path/to/psion_url.txt") # outputs all URLs
 
