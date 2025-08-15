@@ -607,7 +607,7 @@ a {
 	randomIndex = Math.floor(Math.random() * urls.length);
 	} while (randomIndex === lastIndex && urls.length > 1);
 	
-	urltodisplay.innerHTML = randomIndex + " - " + shortenTitle(urls[randomIndex], 45);
+	urltodisplay.innerHTML = randomIndex + " - " + shortenTitle(urls[randomIndex], 38);
 
 	lastIndex = randomIndex;
 	const fullURL = buildArchiveURL(urls[randomIndex]);
