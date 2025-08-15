@@ -4,104 +4,140 @@
   <meta charset="UTF-8">
   <title>Psion Time Capsule</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 20px;
-    }
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
 
-    .button-group {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 
-    button, select {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
+button, select {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
 
-    button {
-      background-color: #f0f0f0;
-    }
+button {
+  background-color: #f0f0f0;
+}
 
-    button:hover {
-      background-color: #ddd;
-    }
+button:hover {
+  background-color: #ddd;
+}
 
-    select {
-      background-color: #fff;
-      color: #333;
-    }
+select {
+  background-color: #fff;
+  color: #333;
+}
 
-    iframe {
-      width: 100%;
-      height: calc(100vh - 50px);
-      border: none;
-    }
-	
-	#nextBtn {
-	  background-color: #007BFF; 
-	  color: white;
-	}
+iframe {
+  width: 100%;
+  height: calc(100vh - 70px);
+  border: none;
+}
 
-	#nextBtn:hover {
-	  background-color: #0056b3; 
-	}
-	
-	#openBtn {
-	  background-color: #44EE66;
-	  color: white;
-	}
+#nextBtn {
+  background-color: #007BFF; 
+  color: white;
+}
 
-	#openBtn:hover {
-	  background-color: #22AA11;
-	}
-	
-	#urltodisplay {
-	  font-size : 12px;
-	  color: white;
-	}
-		
-	.loader {
-	  border: 6px solid #f3f3f3;
-	  border-top: 6px solid #007BFF;
-	  border-radius: 50%;
-	  width: 70px;
-	  height: 70px;
-	  animation: spin 1s linear infinite;
-	  position: absolute;
-	  top: 15%;
-	  left: 90%;
-	  transform: translate(-50%, -50%);
-	  z-index: 10;
-	  display: none; /* Caché par défaut */
-	}
+#nextBtn:hover {
+  background-color: #0056b3; 
+}
 
-	@keyframes spin {
-	  0% { transform: rotate(0deg); }
-	  100% { transform: rotate(360deg); }
-	}
-	
+#openBtn {
+  background-color: #44EE66;
+  color: white;
+}
+
+#openBtn:hover {
+  background-color: #22AA11;
+}
+
+#urltodisplay {
+  font-size: 12px;
+  color: white;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007BFF;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 15%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 a {
-  color: white; 
+  color: white;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .button-group {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  button, select {
+    font-size: 14px;
+    padding: 8px 12px;
+    flex: 1 1 auto;
+  }
+
+  iframe {
+    height: calc(100vh - 160px);
+  }
+
+  .loader {
+    top: 20%;
+    left: 50%;
+  }
 }
 
 
