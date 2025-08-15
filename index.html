@@ -135,7 +135,7 @@ a {
   }
 
   .loader {
-    top: 20%;
+    top: 10%;
     left: 50%;
   }
 }
@@ -153,7 +153,7 @@ a {
 	</div>
     <div class="button-group">
       <select id="yearSelect"></select>
-      <button id="shareBtn">Share</button>
+      <button id="shareBtn">Copy</button>
 	  <button style="width: 100px;" id="openBtn">Browse</button>
       <button style="width: 100px;" id="nextBtn">Next</button>
     </div>
@@ -444,7 +444,6 @@ a {
 'http://www.mcaleely.com/freeware',
 'http://www.medvale.demon.co.uk',
 'http://www.medvale.demon.co.uk/gi.htm',
-'http://www.mssoft.com.au/mark/freecell.htm',
 'http://www.mssoft.com.au/mark/index.html',
 'http://www.multimania.com/gweno',
 'http://www.mypsion.ru/AlarmPlus.php',
@@ -599,7 +598,7 @@ a {
 	randomIndex = Math.floor(Math.random() * urls.length);
 	} while (randomIndex === lastIndex && urls.length > 1);
 	
-	urltodisplay.innerHTML = urls[randomIndex] ;
+	urltodisplay.innerHTML = randomIndex + " - " + urls[randomIndex] ;
 
 	lastIndex = randomIndex;
 	const fullURL = buildArchiveURL(urls[randomIndex]);
@@ -620,12 +619,12 @@ a {
         .then(() => {
           shareBtn.textContent = "Copied to Clipboard !";
           setTimeout(() => {
-            shareBtn.textContent = "Share";
+            shareBtn.textContent = "Copy";
           }, 1500);
         })
         .catch(err => {
-          console.error("Erreur lors de la copie :", err);
-          alert("Impossible de copier l'URL.");
+          console.error("Error :", err);
+          alert("Error coping to clipboard.");
         });
     }
 		
