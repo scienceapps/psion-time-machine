@@ -182,7 +182,7 @@ a {
       <button id="shareBtn">Copy</button>
 	  <button style="width: 100px;" id="openBtn">Browse</button>
       <button style="width: 100px;" id="nextBtn">Next</button>
-	  <a href=https://github.com/scienceapps/psion-time-machine target=blank_><img src="assets/about.png"></a>
+	  <a href=https://github.com/scienceapps/psion-time-machine/blob/main/README.md target=blank_><img src="assets/about.png" width=32></a>
     </div>
   </header>
   <main>
@@ -642,8 +642,8 @@ a {
     }  
 
     function copyCurrentURL() {
-      const currentURL = iframe.src;
-
+      const currentURL = iframe.src.replace("id_", "");
+	  
       navigator.clipboard.writeText(currentURL)
         .then(() => {
           shareBtn.textContent = "Copied to Clipboard !";

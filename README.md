@@ -2,11 +2,11 @@
 
 Psion Time Capsule is a web app that lets users explore archived Psion-related websites from the late '90s and early 2000s. Built from URLs found on old CD-ROMs, it offers a glimpse into the personal homepages of developers and uncovers forgotten apps from the early days of mobile computing.
 
-# Start Application
+## Start Application
 
 Click here : [https://scienceapps.github.io/psion-time-machine/](https://scienceapps.github.io/psion-time-machine/)
 
-# How does it work ?
+## Method for discovering URLs :
 
 ### Crawling URLs on software archive : 
 
