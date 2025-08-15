@@ -84,25 +84,34 @@ iframe {
   color: white;
 }
 
-.loader {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #007BFF;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  animation: spin 1s linear infinite;
+.loader-bar {
   position: absolute;
-  top: 15%;
-  left: 90%;
-  transform: translate(-50%, -50%);
+  background-color: #333333;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  background-color: #333333;
   z-index: 10;
   display: none;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.loader-bar::before {
+  content: "";
+  position: absolute;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to right, #333333, #FFFF00);
+  animation: loadingBar 1s linear infinite;
 }
+
+@keyframes loadingBar {
+  0% { left: -40%; }
+  100% { left: 100%; }
+}
+
 
 a {
   color: white;
@@ -136,10 +145,7 @@ a {
     height: calc(100vh - 160px);
   }
 
-  .loader {
-    top: 10%;
-    left: 50%;
-  }
+
 }
 
 
@@ -161,7 +167,8 @@ a {
     </div>
   </header>
   <main>
-	<div id="loader" class="loader"></div>
+	<div id="loader" class="loader-bar"></div>
+
     <iframe id="urlFrame" src=""></iframe>
   </main>
 
@@ -600,7 +607,7 @@ a {
 	randomIndex = Math.floor(Math.random() * urls.length);
 	} while (randomIndex === lastIndex && urls.length > 1);
 	
-	urltodisplay.innerHTML = randomIndex + " - " + urls[randomIndex] ;
+	urltodisplay.innerHTML = randomIndex + " - " + shortenTitle(urls[randomIndex], 45);
 
 	lastIndex = randomIndex;
 	const fullURL = buildArchiveURL(urls[randomIndex]);
@@ -644,6 +651,11 @@ a {
       const currentURL = iframe.src;
 	  window.open(currentURL.replace("id_", ""),"_blank");
     }
+	
+	function shortenTitle(title, maxLength) {
+		if (title.length <= maxLength) return title;
+		return title.slice(0, maxLength) + '...';
+	}
 	
 	let currentURL = iframe.src;
 
