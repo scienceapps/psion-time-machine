@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Psion Time Capsule</title>
   <style>
 body {
@@ -77,6 +76,24 @@ iframe {
 
 #openBtn:hover {
   background-color: #22AA11;
+}
+
+#shareBtn {
+  background-color: #666666;
+  color: white;
+}
+
+#shareBtn:hover {
+  background-color: #888888;
+}
+
+#yearSelect {
+  background-color: #666666;
+  color: white;
+}
+
+#yearSelect:hover {
+  background-color: #888888;
 }
 
 #urltodisplay {
@@ -165,6 +182,7 @@ a {
       <button id="shareBtn">Copy</button>
 	  <button style="width: 100px;" id="openBtn">Browse</button>
       <button style="width: 100px;" id="nextBtn">Next</button>
+	  <a href=https://github.com/scienceapps/psion-time-machine target=blank_><img src="assets/about.png"></a>
     </div>
   </header>
   <main>
@@ -615,10 +633,7 @@ a {
 		iframe.src = fullURL;
     }
 	
-    function loadAboutPage() {
-		iframe.src = "https://scienceapps.github.io/psion-time-machine/about.html";
-	}
-	
+ 
     function ReloadURL() {
 	showLoader();
 	nextBtn.textContent = "Loading...";
@@ -660,7 +675,7 @@ a {
 	function shortenTitle(title, maxLength) {
 		if (title.length <= maxLength) return title;
 		return title.slice(0, maxLength) + '...';
-	}
+	}	
 	
 	let currentURL = iframe.src;
 
@@ -682,7 +697,7 @@ a {
 	  hideLoader();
     };
 
-    window.onload = loadAboutPage;
+    window.onload = loadRandomURL;
     nextBtn.addEventListener("click", loadRandomURL);
     shareBtn.addEventListener("click", copyCurrentURL);
 	openBtn.addEventListener("click", openCurrentURL);
