@@ -29,6 +29,6 @@ It does this by:
 - Saving the matching URLs to a new file.
 - Logging any URLs that failed to load (due to network issues or timeouts) for future retry.
 
-## Psion developer homepage database :
+## Psion developer homepages database :
 
 You can view the list of Psion developer URLs [here](https://github.com/scienceapps/psion-time-machine/blob/main/data/psion-urls.txt) and directly suggest changes on GitHub if any URLs are missing.
