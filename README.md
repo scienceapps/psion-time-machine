@@ -28,3 +28,7 @@ It does this by:
 - Visiting each website and checking if the page content contains keywords like "psion" or "epoc".
 - Saving the matching URLs to a new file.
 - Logging any URLs that failed to load (due to network issues or timeouts) for future retry.
+
+## Start Application :
+
+You can view the list of Psion developer URLs [here](https://github.com/scienceapps/psion-time-machine/blob/main/data/psion-urls.txt) and directly suggest changes on GitHub if any URLs are missing.
