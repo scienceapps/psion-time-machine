@@ -22,8 +22,7 @@ Click here : [https://scienceapps.github.io/psion-time-machine/](https://science
 
 ### URLs filtering to specific key words :
 
-02-filterpsioncontent.py : This script is designed to analyze a list of URLs and identify which ones are related to Psion—a historic brand of mobile computing devices.
-
+02-filterpsioncontent.py : This script is designed to analyze a list of URLs and identify which ones are related to Psion.
 It does this by:
 
 - Reading URLs from a text file.
